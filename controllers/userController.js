@@ -16,15 +16,27 @@ userController.findUser=async function(req,res,next){
     let user= await User.findById(id) .catch(err =>{
         return next(res);
     });
-    return res.status(200).jason(user);
+    return res.status(200).json(user);
     
 }
 
 userController.store=async function(req,res,next){
     let user=new User({});
-    user.materia=req
+    user.materia=req.body.materia;
+    user.uv=req.body.uv;
+    user.descripcion=req.body.descripcion;
 
-    
+    try{await user.save();
+        return res.status(200).json({message :"succes",user:user});
+    }
+    catch(err){
+        return res.status(500).json({err:err,message :"fallo"})
+    }    
+}
+
+userController.delete=async function(req,res,nex){
+    let{id}=req.params;
+
 }
 
 module.exports=userController;

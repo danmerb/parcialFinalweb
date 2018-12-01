@@ -6,7 +6,8 @@ mongoose.connect(mongodb.URI, {
     useNewUrlParser: true
 
 
-    .then(db =>console.log("succes"))
+    
+}
+)
 
-    .catch(err => console.error(err))
-});
+
