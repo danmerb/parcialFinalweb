@@ -3,7 +3,7 @@ const {Schema}=mongoose;
 
 const userSchema =new Schema({
     materia:{type:String,required:true},
-    uv:{type:Number,required:true},
+    uv:{type:String,required:true},
     descripcion:{type:String,required:true}
 });
 
