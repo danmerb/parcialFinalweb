@@ -52,9 +52,9 @@ userController.store = async function (req, res, next) {
 /*userController.update = async function (req, res, nex) {
     let { id } = req.params;
     let user = {
-        materia = req.body.materia,
-        uv = req.body.uv,
-        descripcion = req.body.descripcion
+        materia : req.body.materia,
+        uv : req.body.uv,
+        descripcion :req.body.descripcion
     }
     console.log(user);
     try {
@@ -63,10 +63,11 @@ userController.store = async function (req, res, next) {
     }
     catch (err) {
         return res.status(500).json({ err: err, message: "fallo la actualizacion" })
-    }
+    }}
+    */
 
 
-}*/
+
 
 userController.delete = async function (req, res, nex) {
     let { id } = req.params;

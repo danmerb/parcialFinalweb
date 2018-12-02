@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 const userController=require('../controllers/userController');
@@ -10,7 +11,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/',userController.index);
 
-router.get('/:id',userController.findUser);
+router.post('/:id',userController.findUser);
 
 //router.update('/:id',userController.update);
 
